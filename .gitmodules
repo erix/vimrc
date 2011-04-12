@@ -4,3 +4,6 @@
 [submodule "bundle/vim-colors"]
 	path = bundle/vim-colors
 	url = https://github.com/spf13/vim-colors.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/spf13/snipmate.vim.git
