@@ -66,7 +66,7 @@ endif
 	if has('mac')
 		set guifont=Monaco:h13
 	elseif has('unix')
-		set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
+		set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
 	endif
 	set cursorline  				" highlight current line
 	" hi cursorline guibg=#333333 	" highlight bg color of current line
