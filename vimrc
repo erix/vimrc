@@ -116,7 +116,6 @@ endif
 	" GVIM- (here instead of .gvimrc)
 	if has('gui_running')
 		set guioptions-=T          	" remove the toolbar
-		set transparency=5          " Make the window slightly transparent
 	else
 		set term=builtin_ansi       " Make arrow and other keys work
 	endif
