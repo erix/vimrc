@@ -63,7 +63,11 @@ endif
 	color ir_black   	       		" load a colorscheme
 	set tabpagemax=15 				" only show 15 tabs
 	set showmode                   	" display the current mode
-	set guifont=Monaco:h13
+	if has('mac')
+		set guifont=Monaco:h13
+	elseif has('unix')
+		set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
+	endif
 	set cursorline  				" highlight current line
 	" hi cursorline guibg=#333333 	" highlight bg color of current line
 	" hi CursorColumn guibg=#333333   " highlight cursor
