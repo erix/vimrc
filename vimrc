@@ -43,6 +43,15 @@ endif
 	" Yank from the cursor to the end of the line, to be consistent with C and D.
 	nnoremap Y y$
 	
+	" Bubble single lines
+	nmap <C-S-Up> [e
+	nmap <C-S-Down> ]e
+	" Bubble multiple lines
+	vmap <C-S-Up> [egv  
+	vmap <C-S-Down> ]egv
+		
+	" Visually select the text that was last edited/pasted
+	nmap gV `[v`]
 " }
 
 " Formatting {
