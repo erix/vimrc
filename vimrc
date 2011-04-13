@@ -52,6 +52,18 @@ endif
 		
 	" Visually select the text that was last edited/pasted
 	nmap gV `[v`]
+
+	"Map code completion to , + tab
+	imap ,<tab> <C-x><C-o>
+		
+	"http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+	set completeopt=longest,menuone
+	inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+	inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+	  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+	inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+	  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+		
 " }
 
 " Formatting {
@@ -85,7 +97,6 @@ endif
 		set ruler                  	" show the ruler
 		" set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
 		set showcmd                	" show partial commands in status line and
-									" selected characters/lines in visual mode
 	endif
 
 	if has('statusline')
