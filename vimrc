@@ -1,3 +1,4 @@
+filetype off
 " Setup Bundle Support {
 " The next two lines ensure that the ~/.vim/bundle/ system works
 	runtime! autoload/pathogen.vim
@@ -32,7 +33,7 @@ endif
 
 " Key (re)Mappings {
 	let mapleader = ","
-	nmap <leader>e :tabedit $MYVIMRC<CR>
+	nmap <leader>ev :tabedit $MYVIMRC<CR>
 	nmap <leader>w :w<CR>
 	nmap <leader>l :set list!<CR>
 
@@ -155,5 +156,9 @@ endif
 		let NERDTreeShowHidden=1
 		let NERDTreeKeepTreeInNewTab=1
 	" }
-	
+		
+	" AutoCloseTag {
+		" Make it so AutoCloseTag works for xml and xhtml files as well
+		au FileType xhtml,xml ru ftplugin/autoclosetag.vim
+	" }
 " }
