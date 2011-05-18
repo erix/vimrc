@@ -161,4 +161,13 @@ endif
 		" Make it so AutoCloseTag works for xml and xhtml files as well
 		au FileType xhtml,xml ru ftplugin/autoclosetag.vim
 	" }
+
+	" Coffee-script {
+		map <F5> :!coffee %<CR>
+	" }
+	
+	" DelimitMate {
+		imap <C-Tab> <Plug>delimitMateS-Tab
+		imap <CR> <Plug>delimitMateCR
+	" }
 " }
