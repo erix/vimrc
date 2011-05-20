@@ -168,6 +168,7 @@ endif
 	
 	" DelimitMate {
 		imap <C-Tab> <Plug>delimitMateS-Tab
+		imap <Space> <Plug>delimitMateSpace
 		imap <CR> <Plug>delimitMateCR
 	" }
 " }
